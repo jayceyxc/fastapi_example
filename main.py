@@ -16,3 +16,8 @@ def insert(people: People):
     age_after_10_years = people.age + 10
     msg = f'此人名字叫做：{people.name}，十年后此人年龄：{age_after_10_years}'
     return {'success': True, 'msg': msg}
+
+
+@app.get('/')
+def index():
+    return {'message': '你已经正确创建 FastApi 服务！'}
